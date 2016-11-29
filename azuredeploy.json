@@ -115,6 +115,10 @@
             "value": "[parameters('parseMasterKey')]"
             },
             {
+            "name": "CLIENT_ID",
+            "value": "[parameters('')]"
+            },
+            {
             "name": "SERVER_URL",
             "value": "[parameters('parseServerUrl')]"
             },
