@@ -18,6 +18,11 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed,
   clientKey: process.env.CLIENT_KEY || '',
+  javascriptKey: process.env.JAVASCRIPT_KEY || '',
+  dotNetKey: process.env.DOTNET_KEY || '',
+  restAPIKey: process.env.REST_API_KEY || '',
+  webhookKey: process.env.WEBHOOK_KEY || '',
+  fileKey: process.env.FILE_KEY || '',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
