@@ -30,6 +30,10 @@ var api = new ParseServer({
     android: {
       senderId: process.env.PUSH_ANDROID_SENDER_ID || '', // The Sender ID of GCM
       apiKey: process.env.PUSH_ANDROID_API_KEY || '' // The Server API Key of GCM
+    },
+    ios: {
+      pfx: process.env.PUSH_IOS_PFX || '', // The filename of private key and certificate in PFX or PKCS12 format from disk
+      bundleId: process.env.PUSH_IOS_BUNDLE_ID || '', // The bundle identifier associate with your app
     }
   }
 });
