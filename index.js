@@ -31,10 +31,16 @@ var api = new ParseServer({
       senderId: process.env.PUSH_ANDROID_SENDER_ID || '', // The Sender ID of GCM
       apiKey: process.env.PUSH_ANDROID_API_KEY || '' // The Server API Key of GCM
     },
-    ios: {
-      pfx: process.env.PUSH_IOS_PFX || '', // The filename of private key and certificate in PFX or PKCS12 format from disk
-      bundleId: process.env.PUSH_IOS_BUNDLE_ID || '', // The bundle identifier associate with your app
-    }
+    ios: [
+      {
+        pfx: process.env.PUSH_IOS_PFX || '', // The filename of private key and certificate in PFX or PKCS12 format from disk
+        bundleId: process.env.PUSH_IOS_BUNDLE_ID || '', // The bundle identifier associate with your app
+      },
+      {
+        pfx: process.env.PUSH_IOS_TESTING_PFX || '', // The filename of private key and certificate in PFX or PKCS12 format from disk
+        bundleId: process.env.PUSH_IOS_TESTING_BUNDLE_ID || '', // The bundle identifier associate with your app
+      }
+    ]
   }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
